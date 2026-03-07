@@ -1,5 +1,6 @@
 /* ==========================================================================
-   MY-ARCHITEKTEN — Main JavaScript
+   MY-ARCHITEKTEN — Main JavaScript v2.0
+   Performance-optimized, accessible
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,37 +18,49 @@ function initNavigation() {
     const nav = document.getElementById('main-nav');
     const toggle = document.getElementById('nav-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    let lastScroll = 0;
 
-    // Scroll behavior
+    if (!nav) return;
+
+    // Scroll — glassmorphism nav on scroll
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                nav.classList.toggle('scrolled', window.scrollY > 50);
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        lastScroll = currentScroll;
     }, { passive: true });
 
     // Mobile toggle
     if (toggle && mobileMenu) {
+        const closeMobile = () => {
+            toggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        const openMobile = () => {
+            toggle.classList.add('active');
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
         toggle.addEventListener('click', () => {
-            toggle.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            mobileMenu.classList.contains('active') ? closeMobile() : openMobile();
         });
 
         // Close on link click
-        const mobileLinks = mobileMenu.querySelectorAll('.mobile-link, .mobile-cta');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                toggle.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+        mobileMenu.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
+            link.addEventListener('click', closeMobile);
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobile();
+            }
         });
     }
 }
@@ -58,34 +71,29 @@ function initNavigation() {
 
 function initScrollAnimations() {
     const elements = document.querySelectorAll('[data-animate]');
-
     if (!elements.length) return;
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Stagger animations slightly
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, index * 80);
+                entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -60px 0px'
+        rootMargin: '0px 0px -40px 0px'
     });
 
     elements.forEach(el => observer.observe(el));
 }
 
 /* ==========================================================================
-   Accordion (Leistungsphasen)
+   Accordion (Leistungsphasen / FAQ)
    ========================================================================== */
 
 function initAccordion() {
     const phaseItems = document.querySelectorAll('.phase-item');
-
     if (!phaseItems.length) return;
 
     phaseItems.forEach(item => {
@@ -113,13 +121,12 @@ function initAccordion() {
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
-            const target = document.querySelector(anchor.getAttribute('href'));
+            const href = anchor.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
