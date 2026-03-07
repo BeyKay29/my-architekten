@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://my-architekten.de/sitemap.xml
+
+# Block crawl of non-content pages
+Disallow: /images/

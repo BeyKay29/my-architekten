@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://my-architekten.de/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://my-architekten.de/ueber-uns.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://my-architekten.de/leistungen.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://my-architekten.de/kontakt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-dortmund.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-bochum.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-witten.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-schwerte.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-unna.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-luenen.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://my-architekten.de/nutzungsaenderung-hagen.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://my-architekten.de/impressum.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://my-architekten.de/datenschutz.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
