@@ -6,141 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutzungsänderung Hagen | Architekt für Bauantrag & Planung</title>
     <meta name="description"
-        content="Nutzungsänderung in Hagen: Gewerbe zu Wohnen, Büro zu Praxis. Professionelle Begleitung beim Bauamt Hagen durch erfahrenen Architekten. Jetzt beraten lassen!">
+        content="Nutzungsänderung in Hagen: Gewerbe zu Wohnen, Büro zu Praxis. Professionelle Begleitung beim Bauamt Hagen durch erfahrenen Architekten. Jetzt anfragen.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="main-nav">
+    <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" id="nav-logo">
-                <img src="images/logo.png" alt="myArchitekten" width="120" height="32">
-            </a>
-            <div class="nav-links" id="nav-links">
-                <a href="index.html" class="nav-link">Startseite</a>
-                <a href="ueber-uns.html" class="nav-link">Über uns</a>
-                <a href="leistungen.html" class="nav-link">Leistungen</a>
-                <a href="nutzungsaenderung.html" class="nav-link active">Nutzungsänderung</a>
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="myArchitekten"></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Start</a>
+                <a href="ueber-uns.html" class="nav-link">Studio</a>
+                <a href="leistungen.html" class="nav-link">Expertise</a>
+                <a href="nutzungsaenderung.html" class="nav-link active">Umnutzung</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </div>
-            <a href="kontakt.html" class="nav-cta" id="nav-cta">Projekt anfragen</a>
+            <a href="kontakt.html" class="nav-cta">Projekt anfragen</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container page-header-content">
-            <span class="section-tag">Hagen</span>
-            <h1 class="section-title">Nutzungsänderung<br><span class="accent">in Hagen.</span></h1>
-            <p class="page-header-subtitle">Das Tor zum Sauerland. Wir begleiten Ihre Umnutzungsprojekte mit lokaler
-                Expertise.</p>
+    <section class="hero" style="min-height: 50vh;">
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-tag">Stadt Hagen</span>
+                <h1 class="hero-title">Umnutzung in<br><span class="hero-title-accent">Hagen.</span></h1>
+            </div>
         </div>
     </section>
-
-    <!-- Intro -->
     <section class="philosophy">
         <div class="container">
             <div class="philosophy-grid">
-                <div class="philosophy-image" data-animate>
-                    <img src="images/construction-site.png" alt="Bauvorhaben Hagen" loading="lazy" width="600"
-                        height="750">
-                    <div class="philosophy-image-accent"></div>
-                </div>
+                <div class="philosophy-image" data-animate><img src="images/construction-site.png"
+                        alt="Hagen Bauantrag"></div>
                 <div class="philosophy-content" data-animate>
-                    <span class="section-tag">Projektpartner</span>
-                    <h2>Hagen <span class="accent">im Wandel</span></h2>
-                    <div class="ma-divider"></div>
-                    <p class="philosophy-text">Hagen stellt durch seine topografische Vielfalt besondere Anforderungen.
-                        Bei Nutzungsänderungen in Hanglagen sind oft zusätzliche statische Nachweise erforderlich.</p>
-                    <p class="philosophy-text">Das Bauordnungsamt der Stadt Hagen ist zuständig. Wir übernehmen für Sie
-                        die Kommunikation und sorgen für eine reibungslose Einreichung Ihres Nutzungsänderungsantrags.
-                    </p>
-                    <a href="kontakt.html" class="btn btn-primary" style="margin-top: 1rem;">Beratung für Hagen</a>
+                    <span class="section-tag">Partner</span>
+                    <h2 class="section-title">Architektur im Wandel.</h2>
+                    <p class="philosophy-text">Hagen bietet durch seine industrielle Geschichte große Chancen für
+                        Umnutzungen. Wir verwandeln alte Strukturen in moderne Lebensräume.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FAQ -->
-    <section class="leistungsphasen">
+    <footer class="footer">
         <div class="container">
-            <div class="section-header centered" data-animate>
-                <span class="section-tag no-line">FAQ</span>
-                <h2 class="section-title">Häufige Fragen zu Hagen</h2>
-                <div class="ma-divider centered"></div>
-            </div>
-            <div class="phase-accordion">
-                <div class="phase-item" data-animate>
-                    <div class="phase-header">
-                        <div class="phase-number">01</div>
-                        <h3 class="phase-title">Ist eine Umnutzung im Mischgebiet möglich?</h3>
-                        <div class="phase-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M19 9l-7 7-7-7" />
-                            </svg></div>
-                    </div>
-                    <div class="phase-content">
-                        <div class="phase-body">
-                            <p>In gemischten Gebieten in Hagen wird die Umnutzung zu Wohnen häufig genehmigt. Wir prüfen
-                                die planungsrechtliche Zulässigkeit vorab.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/logo.png" alt="myArchitekten" width="120" height="32">
-                    </a>
-                    <p class="footer-description">Architektur mit Klarheit. Vom Konzept bis zur Genehmigung.</p>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Seiten</h4>
-                    <a href="index.html" class="footer-link">Startseite</a>
-                    <a href="ueber-uns.html" class="footer-link">Über uns</a>
-                    <a href="leistungen.html" class="footer-link">Leistungen</a>
-                    <a href="kontakt.html" class="footer-link">Kontakt</a>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Leistungen</h4>
-                    <a href="leistungen.html" class="footer-link">Bescheinigungen</a>
-                    <a href="nutzungsaenderung.html" class="footer-link">Nutzungsänderung</a>
-                    <a href="leistungen.html" class="footer-link">Denkmalschutz</a>
-                    <a href="leistungen.html" class="footer-link">Anbauten</a>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Region</h4>
-                    <a href="nutzungsaenderung-dortmund.html" class="footer-link">Dortmund</a>
-                    <a href="nutzungsaenderung-bochum.html" class="footer-link">Bochum</a>
-                    <a href="nutzungsaenderung-witten.html" class="footer-link">Witten</a>
-                    <a href="nutzungsaenderung-schwerte.html" class="footer-link">Schwerte</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 myArchitekten. &nbsp;&middot;&nbsp; <a href="impressum.html">Impressum</a>
-                    &nbsp;&middot;&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
-            </div>
+            <div class="footer-bottom">&copy; 2025 myArchitekten. Hagen Focus.</div>
         </div>
     </footer>
-
     <script src="main.js"></script>
 </body>
 

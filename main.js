@@ -24,10 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+
+                // Stat Counter Animation
+                if (entry.target.classList.contains('stat-item')) {
+                    const numberEl = entry.target.querySelector('.stat-number');
+                    const target = parseInt(numberEl.innerText);
+                    if (!isNaN(target)) {
+                        animateValue(numberEl, 0, target, 2000);
+                    }
+                }
                 revealObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
+
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = Math.floor(progress * (end - start) + start) + (obj.innerHTML.includes('+') ? '+' : (obj.innerHTML.includes('%') ? '%' : ''));
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
 
     animateElements.forEach(el => {
         el.style.opacity = '0';

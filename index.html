@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myArchitekten Dortmund | Modern Pro Architecture</title>
+    <title>myArchitekten Dortmund | Modern Pro Architecture & Nutzungsänderung</title>
     <meta name="description"
-        content="Exklusive Architekturplanung in Dortmund. Nutzungsänderungen, Denkmalschutz und Anbauten im modernen Apple-Style.">
+        content="Exklusive Architekturplanung in Dortmund. Spezialisiert auf Nutzungsänderungen, Bauanträge und Denkmalschutz im modernen Apple-Pro-Stil. Jetzt Projekt anfragen.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,14 @@
         "@type": "Architect",
         "name": "myArchitekten",
         "url": "https://my-architekten.de",
+        "logo": "https://my-architekten.de/images/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dortmund",
             "postalCode": "44139",
             "streetAddress": "Rheinlanddamm 201"
-        }
+        },
+        "description": "Ihr Architekt für Nutzungsänderungen und moderne Bauplanung in Dortmund und NRW."
     }
     </script>
 </head>
@@ -35,7 +37,7 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="images/logo.png" alt="myArchitekten">
+                <img src="images/logo.png" alt="myArchitekten Logo - Architektur Dortmund">
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Start</a>
@@ -44,17 +46,29 @@
                 <a href="nutzungsaenderung.html" class="nav-link">Umnutzung</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </div>
-            <a href="kontakt.html" class="nav-cta">Anfragen</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Menü">
+            <a href="kontakt.html" class="nav-cta">Projekt anfragen</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link active">Start</a>
+            <a href="ueber-uns.html" class="mobile-link">Studio</a>
+            <a href="leistungen.html" class="mobile-link">Expertise</a>
+            <a href="nutzungsaenderung.html" class="mobile-link">Umnutzung</a>
+            <a href="kontakt.html" class="mobile-link">Kontakt</a>
+            <a href="kontakt.html" class="mobile-cta">Projekt anfragen</a>
+        </div>
+    </div>
+
     <!-- Hero -->
     <section class="hero">
         <div class="hero-bg">
-            <img src="images/hero-4k.jpg" alt="Architecture" fetchpriority="high">
+            <img src="images/hero-4k.jpg" alt="Moderne Architektur in Dortmund - 4K Hero Bild" fetchpriority="high">
         </div>
         <div class="container">
             <div class="hero-content">
@@ -64,10 +78,10 @@
                     <span class="hero-title-accent">Neu gedacht.</span>
                 </h1>
                 <p class="hero-subtitle">Wir vereinen modernste Planung mit Genehmigungssicherheit. Ihr Partner für
-                    Nutzungsänderungen und exklusive Umbauten in Dortmund.</p>
+                    Nutzungsänderungen und exklusive Umbauten in Dortmund und Umgebung.</p>
                 <div class="hero-actions">
-                    <a href="kontakt.html" class="btn btn-primary">Projekt starten</a>
-                    <a href="leistungen.html" class="btn btn-secondary">Leistungen</a>
+                    <a href="kontakt.html" class="btn btn-primary">Projekt anfragen</a>
+                    <a href="leistungen.html" class="btn btn-secondary">Unsere Expertise</a>
                 </div>
             </div>
         </div>
@@ -79,19 +93,19 @@
             <div class="stats-grid">
                 <div class="stat-item" data-animate>
                     <span class="stat-number">10+</span>
-                    <span class="stat-label">Jahre</span>
+                    <span class="stat-label">Jahre Expertise</span>
                 </div>
                 <div class="stat-item" data-animate>
                     <span class="stat-number">150+</span>
-                    <span class="stat-label">Projekte</span>
+                    <span class="stat-label">Bauanträge</span>
                 </div>
                 <div class="stat-item" data-animate>
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">Fokus</span>
+                    <span class="stat-label">Genehmigungsfokus</span>
                 </div>
                 <div class="stat-item" data-animate>
                     <span class="stat-number">Top</span>
-                    <span class="stat-label">Rating</span>
+                    <span class="stat-label">Bewertungen</span>
                 </div>
             </div>
         </div>
@@ -114,8 +128,8 @@
                         </svg>
                     </div>
                     <h3 class="service-card-title">Abgeschlossenheit</h3>
-                    <p class="service-card-text">Präzise Bescheinigungen für Ihre Aufbruchspläne. In Kooperation mit
-                        Top-Notaren.</p>
+                    <p class="service-card-text">Präzise Bescheinigungen für Ihre Aufteilungspläne. Wir koordinieren den
+                        gesamten Prozess mit Notaren und Ämtern.</p>
                 </div>
                 <div class="service-card" data-animate>
                     <div class="service-icon">
@@ -131,7 +145,8 @@
                         </svg>
                     </div>
                     <h3 class="service-card-title">Umnutzung</h3>
-                    <p class="service-card-text">Gewerbe zu Wohnen? Wir machen Leerstand zu wertvollem Raum.</p>
+                    <p class="service-card-text">Gewerbe zu Wohnen? Wir machen Leerstand zu wertvollem Raum in Dortmund,
+                        Bochum und ganz NRW.</p>
                 </div>
                 <div class="service-card" data-animate>
                     <div class="service-icon">
@@ -141,8 +156,8 @@
                         </svg>
                     </div>
                     <h3 class="service-card-title">Denkmalschutz</h3>
-                    <p class="service-card-title-sub">Gestern bewahren. Morgen gestalten.</p>
-                    <p class="service-card-text">Behutsame Sanierung kombiniert mit modernen Standards.</p>
+                    <p class="service-card-text">Gestern bewahren. Morgen gestalten. Behutsame Sanierung kombiniert mit
+                        modernsten energetischen Standards.</p>
                 </div>
                 <div class="service-card" data-animate>
                     <div class="service-icon">
@@ -153,7 +168,8 @@
                         </svg>
                     </div>
                     <h3 class="service-card-title">Anbauten</h3>
-                    <p class="service-card-text">Individuelle Raumlösungen für Ihr Bestandsgebäude.</p>
+                    <p class="service-card-text">Individuelle Raumlösungen für Ihr Bestandsgebäude. Wir schaffen
+                        wertvollen Wohnraum durch intelligente Erweiterung.</p>
                 </div>
             </div>
         </div>
@@ -164,7 +180,7 @@
         <div class="container">
             <div class="philosophy-grid">
                 <div class="philosophy-image" data-animate>
-                    <img src="images/philosophy.jpg" alt="Philosophy">
+                    <img src="images/philosophy.jpg" alt="Architektur-Vision von Mustafa Yilmaz - myArchitekten">
                 </div>
                 <div class="philosophy-content" data-animate>
                     <span class="section-tag">Vision</span>
@@ -183,8 +199,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="images/logo.png" alt="Logo">
-                    <p class="footer-description">Architektur mit Anspruch. Dortmund & Umgebung.</p>
+                    <img src="images/logo.png" alt="myArchitekten Logo White">
+                    <p class="footer-description">Architektur mit Anspruch. Ihr Partner für Nutzungsänderungen in
+                        Dortmund & Umgebung.</p>
                 </div>
                 <div class="footer-nav">
                     <h4 class="footer-heading">Studio</h4>
@@ -202,10 +219,11 @@
                     <h4 class="footer-heading">Legal</h4>
                     <a href="impressum.html" class="footer-link">Impressum</a>
                     <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                    <p class="footer-link" style="margin-top:20px; color:#444;">Tel: 0231 1372 8210</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2025 myArchitekten. Crafted for Perfection.
+                &copy; 2025 myArchitekten. Designed with Precision in Dortmund.
             </div>
         </div>
     </footer>
