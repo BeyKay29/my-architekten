@@ -4,187 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leistungen | myArchitekten Dortmund — Kompetenz in der Planung</title>
+    <title>Expertise | myArchitekten Dortmund — High-End Planung</title>
     <meta name="description"
-        content="Unsere Leistungen: Abgeschlossenheitsbescheinigungen, Nutzungsänderungen, Denkmalschutz und Anbauten. Professionelle Architekturplanung in NRW.">
-
+        content="Unsere architektonische Expertise: Von Umnutzungen bis Denkmalschutz. Professionelle Planung im Apple-Stil.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="main-nav">
+    <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" id="nav-logo">
-                <img src="images/logo.png" alt="myArchitekten" width="120" height="32">
-            </a>
-            <div class="nav-links" id="nav-links">
-                <a href="index.html" class="nav-link">Startseite</a>
-                <a href="ueber-uns.html" class="nav-link">Über uns</a>
-                <a href="leistungen.html" class="nav-link active">Leistungen</a>
-                <a href="nutzungsaenderung.html" class="nav-link">Nutzungsänderung</a>
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="myArchitekten"></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Start</a>
+                <a href="ueber-uns.html" class="nav-link">Studio</a>
+                <a href="leistungen.html" class="nav-link active">Expertise</a>
+                <a href="nutzungsaenderung.html" class="nav-link">Umnutzung</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </div>
-            <a href="kontakt.html" class="nav-cta" id="nav-cta">Projekt anfragen</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <a href="kontakt.html" class="nav-cta">Anfragen</a>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-link">Startseite</a>
-            <a href="ueber-uns.html" class="mobile-link">Über uns</a>
-            <a href="leistungen.html" class="mobile-link active">Leistungen</a>
-            <a href="nutzungsaenderung.html" class="mobile-link">Nutzungsänderung</a>
-            <a href="kontakt.html" class="mobile-link">Kontakt</a>
-            <a href="kontakt.html" class="mobile-cta">Projekt anfragen</a>
-        </div>
-    </div>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container page-header-content">
-            <span class="section-tag">Leistungen</span>
-            <h1 class="section-title">Vier Schwerpunkte,<br><span class="accent">eine Handschrift.</span></h1>
-            <p class="page-header-subtitle">Jedes Projekt beginnt mit Klarheit. Ein Überblick über die Leistungen, die
-                ich Ihnen als Architekt mit Erfahrung und einem zuverlässigen Netzwerk anbiete.</p>
+    <section class="hero" style="height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-tag">Portfolio</span>
+                <h1 class="hero-title">Expertise für<br><span class="hero-title-accent">höchste Ansprüche.</span></h1>
+            </div>
         </div>
     </section>
 
-    <!-- Services Detailed -->
-    <section class="services-overview">
+    <section class="services-preview" style="background: var(--c-bg-s);">
         <div class="container">
-            <div class="services-overview-grid">
-                <!-- Service 1 -->
-                <div class="service-overview-card" data-animate>
-                    <div class="service-overview-image">
-                        <img src="images/blueprints.png" alt="Abgeschlossenheitsbescheinigungen" loading="lazy"
-                            width="600" height="400">
-                    </div>
-                    <div class="service-overview-content">
-                        <span class="section-tag no-line">01</span>
-                        <h3 class="service-overview-title">Abgeschlossenheits&shy;bescheinigungen</h3>
-                        <p class="service-overview-text">In enger Abstimmung mit unserem Kooperationspartner, einem
-                            erfahrenen Notar, begleiten wir Sie durch den gesamten Prozess — von der Erstellung der
-                            Bescheinigung bis zur Eintragung ins Grundbuch.</p>
-                        <p class="service-overview-text">Besonders bei der Aufteilung von Bestandsimmobilien in
-                            Eigentumswohnungen ist eine präzise Dokumentation entscheidend für den späteren Verkauf oder
-                            die Beleihung.</p>
-                    </div>
+            <div class="services-grid">
+                <div class="service-card" data-animate>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg></div>
+                    <h3 class="service-card-title">Bescheinigungen</h3>
+                    <p class="service-card-text">Vollständige Abwicklung von Abgeschlossenheitsbescheinigungen. Wir
+                        koordinieren den gesamten Prozess mit Notaren und Ämtern für eine reibungslose Aufteilung Ihres
+                        Objekts.</p>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="service-overview-card inverse" data-animate>
-                    <div class="service-overview-image">
-                        <img src="images/interior.png" alt="Nutzungsänderungen" loading="lazy" width="600" height="400">
-                    </div>
-                    <div class="service-overview-content">
-                        <span class="section-tag no-line">02</span>
-                        <h3 class="service-overview-title">Nutzungs&shy;änderungen</h3>
-                        <p class="service-overview-text">Ob die Umwandlung von Gewerbeflächen in Wohnungen oder die
-                            Planung einer neuen Gastronomie — wir kümmern uns um alle notwendigen Schritte, um Ihre
-                            Vision Wirklichkeit werden zu lassen.</p>
-                        <p class="service-overview-text">Wir prüfen die baurechtliche Zulässigkeit, erstellen die
-                            notwendigen Brandschutznachweise und begleiten den Antrag bis zur Genehmigung durch das
-                            Bauamt.</p>
-                        <a href="nutzungsaenderung.html" class="link-arrow">Mehr zur Nutzungsänderung <svg width="16"
-                                height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg></a>
-                    </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        </svg></div>
+                    <h3 class="service-card-title">Nutzungsänderung</h3>
+                    <p class="service-card-text">Die Transformation von Bestandsflächen ist unser Kerngeschäft. Ob
+                        Gewerbe zu Wohnen oder Gastronomie — wir schaffen die rechtliche und bauliche Grundlage für neue
+                        Nutzungskonzepte.</p>
+                    <a href="nutzungsaenderung.html" class="nav-cta"
+                        style="display:inline-block; margin-top:20px; background:rgba(255,255,255,0.05); border:1px solid var(--c-line);">Details
+                        zur Umnutzung</a>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="service-overview-card" data-animate>
-                    <div class="service-overview-image">
-                        <img src="images/renovation.png" alt="Denkmalschutz" loading="lazy" width="600" height="400">
-                    </div>
-                    <div class="service-overview-content">
-                        <span class="section-tag no-line">03</span>
-                        <h3 class="service-overview-title">Denkmalschutz Umbauten</h3>
-                        <p class="service-overview-text">Der Umbau von denkmalgeschützten Objekten erfordert eine enge
-                            Zusammenarbeit mit der Denkmalschutzbehörde. Wir verbinden moderne Anforderungen mit
-                            historischer Substanz.</p>
-                        <p class="service-overview-text">Mit Fingerspitzengefühl und technischem Know-how sorgen wir
-                            dafür, dass Ihr Vorhaben sowohl den behördlichen Anforderungen als auch Ihren individuellen
-                            Wünschen gerecht wird.</p>
-                    </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" />
+                        </svg></div>
+                    <h3 class="service-card-title">Denkmalschutz</h3>
+                    <p class="service-card-text">Sanierung im Dialog mit der Behörde. Wir erhalten den Charakter
+                        historischer Gebäude und integrieren gleichzeitig moderne Technik und Komfort auf höchstem
+                        Niveau.</p>
                 </div>
-
-                <!-- Service 4 -->
-                <div class="service-overview-card inverse" data-animate>
-                    <div class="service-overview-image">
-                        <img src="images/hero-4k.jpg" alt="Anbauten" loading="lazy" width="600" height="400">
-                    </div>
-                    <div class="service-overview-content">
-                        <span class="section-tag no-line">04</span>
-                        <h3 class="service-overview-title">Anbauten &amp; Erweiterungen</h3>
-                        <p class="service-overview-text">Von kleinen Anbauten bis hin zu großen Erweiterungsprojekten:
-                            Wir stehen Ihnen mit Rat und Tat zur Seite, um weiteren Raum zu schaffen — egal ob privat
-                            oder gewerblich.</p>
-                        <p class="service-overview-text">Wir planen die Erweiterung so, dass sie sich harmonisch in den
-                            Bestand einfügt oder einen bewussten architektonischen Akzent setzt.</p>
-                    </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg></div>
+                    <h3 class="service-card-title">Erweiterungen</h3>
+                    <p class="service-card-text">Hochwertige Anbauten, die den Bestand aufwerten. Wir planen
+                        Erweiterungen, die funktionalen Mehrwert bieten und architektonisch ein klares Statement setzen.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/logo.png" alt="myArchitekten" width="120" height="32">
-                    </a>
-                    <p class="footer-description">Architektur mit Klarheit. Vom Konzept bis zur Genehmigung.</p>
+                <div class="footer-brand"><img src="images/logo.png" alt="Logo">
+                    <p class="footer-description">Architektur mit Anspruch.</p>
                 </div>
                 <div class="footer-nav">
-                    <h4 class="footer-heading">Seiten</h4>
-                    <a href="index.html" class="footer-link">Startseite</a>
-                    <a href="ueber-uns.html" class="footer-link">Über uns</a>
-                    <a href="leistungen.html" class="footer-link">Leistungen</a>
-                    <a href="kontakt.html" class="footer-link">Kontakt</a>
+                    <h4 class="footer-heading">Studio</h4><a href="index.html" class="footer-link">Start</a><a
+                        href="ueber-uns.html" class="footer-link">Über uns</a>
                 </div>
                 <div class="footer-nav">
-                    <h4 class="footer-heading">Leistungen</h4>
-                    <a href="leistungen.html" class="footer-link">Bescheinigungen</a>
-                    <a href="nutzungsaenderung.html" class="footer-link">Nutzungsänderung</a>
-                    <a href="leistungen.html" class="footer-link">Denkmalschutz</a>
-                    <a href="leistungen.html" class="footer-link">Anbauten</a>
+                    <h4 class="footer-heading">Region</h4><a href="nutzungsaenderung-dortmund.html"
+                        class="footer-link">Dortmund</a><a href="nutzungsaenderung-bochum.html"
+                        class="footer-link">Bochum</a>
                 </div>
                 <div class="footer-nav">
-                    <h4 class="footer-heading">Region</h4>
-                    <a href="nutzungsaenderung-dortmund.html" class="footer-link">Dortmund</a>
-                    <a href="nutzungsaenderung-bochum.html" class="footer-link">Bochum</a>
-                    <a href="nutzungsaenderung-witten.html" class="footer-link">Witten</a>
-                    <a href="nutzungsaenderung-schwerte.html" class="footer-link">Schwerte</a>
+                    <h4 class="footer-heading">Legal</h4><a href="impressum.html" class="footer-link">Impressum</a><a
+                        href="datenschutz.html" class="footer-link">Datenschutz</a>
                 </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Kontakt</h4>
-                    <p class="footer-contact-text">Rheinlanddamm 201<br>44139 Dortmund</p>
-                    <p class="footer-contact-text">0231 1372 8210<br>info@my-architekten.de</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 myArchitekten. &nbsp;&middot;&nbsp; <a href="impressum.html">Impressum</a>
-                    &nbsp;&middot;&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
             </div>
         </div>
     </footer>
-
     <script src="main.js"></script>
 </body>
 

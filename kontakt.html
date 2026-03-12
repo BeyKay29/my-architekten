@@ -4,217 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | myArchitekten Dortmund — Ihr Partner für Bauvorhaben</title>
+    <title>Kontakt | myArchitekten Dortmund — Studio für Architektur</title>
     <meta name="description"
-        content="Kontaktieren Sie myArchitekten in Dortmund. Wir beraten Sie zu Nutzungsänderungen, Denkmalschutz und Anbauten im gesamten Ruhrgebiet.">
-
+        content="Kontaktieren Sie myArchitekten. Studio für exklusive Architekturplanung in Dortmund. Wir freuen uns auf Ihr Projekt.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            color: var(--c-text-s);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--c-line);
+            border-radius: var(--radius-s);
+            padding: 16px;
+            color: var(--c-text);
+            font-family: inherit;
+            transition: var(--t-fast);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--c-accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="main-nav">
+    <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" id="nav-logo">
-                <img src="images/logo.png" alt="myArchitekten" width="120" height="32">
-            </a>
-            <div class="nav-links" id="nav-links">
-                <a href="index.html" class="nav-link">Startseite</a>
-                <a href="ueber-uns.html" class="nav-link">Über uns</a>
-                <a href="leistungen.html" class="nav-link">Leistungen</a>
-                <a href="nutzungsaenderung.html" class="nav-link">Nutzungsänderung</a>
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="myArchitekten"></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Start</a>
+                <a href="ueber-uns.html" class="nav-link">Studio</a>
+                <a href="leistungen.html" class="nav-link">Expertise</a>
+                <a href="nutzungsaenderung.html" class="nav-link">Umnutzung</a>
                 <a href="kontakt.html" class="nav-link active">Kontakt</a>
             </div>
-            <a href="kontakt.html" class="nav-cta" id="nav-cta">Projekt anfragen</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <a href="kontakt.html" class="nav-cta">Anfragen</a>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-link">Startseite</a>
-            <a href="ueber-uns.html" class="mobile-link">Über uns</a>
-            <a href="leistungen.html" class="mobile-link">Leistungen</a>
-            <a href="nutzungsaenderung.html" class="mobile-link">Nutzungsänderung</a>
-            <a href="kontakt.html" class="mobile-link active">Kontakt</a>
-            <a href="kontakt.html" class="mobile-cta">Projekt anfragen</a>
-        </div>
-    </div>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container page-header-content">
-            <span class="section-tag">Kontakt</span>
-            <h1 class="section-title">Lassen Sie uns<br><span class="accent">beginnen.</span></h1>
-            <p class="page-header-subtitle">Ob eine erste Beratung oder eine konkrete Projektanfrage — wir freuen uns
-                auf Ihre Nachricht.</p>
+    <section class="hero" style="min-height: 50vh;">
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-tag">Anfrage</span>
+                <h1 class="hero-title">Lassen Sie uns<br><span class="hero-title-accent">Sprechen.</span></h1>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="philosophy" style="padding-top: 0;">
         <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form" data-animate>
-                    <span class="section-tag no-line">Nachricht</span>
-                    <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 2rem;">Schreiben Sie uns</h2>
-
-                    <form id="contact-form" action="#" method="POST">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <div class="form-group">
-                                <label class="form-label" for="vorname">Vorname</label>
-                                <input type="text" id="vorname" name="vorname" class="form-input" placeholder="Vorname"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="nachname">Nachname</label>
-                                <input type="text" id="nachname" name="nachname" class="form-input"
-                                    placeholder="Nachname" required>
-                            </div>
+            <div class="philosophy-grid">
+                <div class="contact-form-sidebar" data-animate>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Ihr Name" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="email">E-Mail Adresse</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de"
-                                required>
+                            <label class="form-label">E-Mail</label>
+                            <input type="email" class="form-input" placeholder="hallo@beispiel.de" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="betreff">Betreff</label>
-                            <input type="text" id="betreff" name="betreff" class="form-input"
-                                placeholder="Thema Ihres Anliegens" required>
+                            <label class="form-label">Projekt</label>
+                            <input type="text" class="form-input" placeholder="Um was geht es?">
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="nachricht">Nachricht</label>
-                            <textarea id="nachricht" name="nachricht" class="form-textarea"
-                                placeholder="Wie können wir Ihnen helfen?" required></textarea>
+                            <label class="form-label">Nachricht</label>
+                            <textarea class="form-textarea" rows="5"
+                                placeholder="Details zu Ihrem Vorhaben..."></textarea>
                         </div>
-                        <div class="form-checkbox">
-                            <input type="checkbox" id="datenschutz" name="datenschutz" required>
-                            <label for="datenschutz">Ich stimme der Verarbeitung meiner Daten gemäß der
-                                Datenschutzerklärung zu.*</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            Anfrage senden
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-                            </svg>
-                        </button>
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; justify-content: center;">Anfrage senden</button>
                     </form>
                 </div>
-
-                <!-- Contact Info Side -->
-                <div class="contact-info-side" data-animate>
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <path
-                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="contact-info-label">Telefon</span>
-                            <span class="contact-info-value">0231 1372 8210</span>
-                        </div>
+                <div class="contact-info-block" data-animate>
+                    <div class="service-card" style="margin-bottom: 24px; padding: 32px;">
+                        <h4 class="footer-heading" style="margin-bottom: 8px;">Studio Dortmund</h4>
+                        <p class="philosophy-text" style="font-size: 16px; margin-bottom: 8px;">Rheinlanddamm
+                            201<br>44139 Dortmund</p>
+                        <p class="philosophy-text" style="font-size: 16px;">T: 0231 1372 8210<br>M:
+                            info@my-architekten.de</p>
                     </div>
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                <polyline points="22,6 12,13 2,6" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="contact-info-label">E-Mail</span>
-                            <span class="contact-info-value">info@my-architekten.de</span>
-                        </div>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="contact-info-label">Adresse</span>
-                            <span class="contact-info-value">Rheinlanddamm 201<br>44139 Dortmund</span>
-                        </div>
-                    </div>
-
-                    <!-- Map -->
-                    <div class="contact-map" data-animate>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5!2d7.4553261!3d51.49837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDI5JzU0LjEiTiA3wrAyNyczMS4yIkU!5e0!3m2!1sde!2sde!4v1"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="Standort myArchitekten">
-                        </iframe>
+                    <div class="philosophy-image" style="height: 300px;">
+                        <img src="images/modern-house.png" alt="Office" style="height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/logo.png" alt="myArchitekten" width="120" height="32">
-                    </a>
-                    <p class="footer-description">Architektur mit Klarheit. Vom Konzept bis zur Genehmigung.</p>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Seiten</h4>
-                    <a href="index.html" class="footer-link">Startseite</a>
-                    <a href="ueber-uns.html" class="footer-link">Über uns</a>
-                    <a href="leistungen.html" class="footer-link">Leistungen</a>
-                    <a href="kontakt.html" class="footer-link">Kontakt</a>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Leistungen</h4>
-                    <a href="leistungen.html" class="footer-link">Bescheinigungen</a>
-                    <a href="nutzungsaenderung.html" class="footer-link">Nutzungsänderung</a>
-                    <a href="leistungen.html" class="footer-link">Denkmalschutz</a>
-                    <a href="leistungen.html" class="footer-link">Anbauten</a>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Region</h4>
-                    <a href="nutzungsaenderung-dortmund.html" class="footer-link">Dortmund</a>
-                    <a href="nutzungsaenderung-bochum.html" class="footer-link">Bochum</a>
-                    <a href="nutzungsaenderung-witten.html" class="footer-link">Witten</a>
-                    <a href="nutzungsaenderung-schwerte.html" class="footer-link">Schwerte</a>
-                </div>
-                <div class="footer-nav">
-                    <h4 class="footer-heading">Kontakt</h4>
-                    <p class="footer-contact-text">Rheinlanddamm 201<br>44139 Dortmund</p>
-                    <p class="footer-contact-text">0231 1372 8210<br>info@my-architekten.de</p>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 myArchitekten. Alle Rechte vorbehalten. &nbsp;&middot;&nbsp;
-                    <a href="impressum.html">Impressum</a> &nbsp;&middot;&nbsp;
-                    <a href="datenschutz.html">Datenschutz</a>
-                </p>
+                &copy; 2025 myArchitekten. Professional Studio.
             </div>
         </div>
     </footer>
-
     <script src="main.js"></script>
 </body>
 

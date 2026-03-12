@@ -1,133 +1,77 @@
-/* ==========================================================================
-   MY-ARCHITEKTEN — Main JavaScript v2.0
-   Performance-optimized, accessible
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
-    initNavigation();
-    initScrollAnimations();
-    initAccordion();
-    initSmoothScroll();
-});
-
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
-
-function initNavigation() {
-    const nav = document.getElementById('main-nav');
-    const toggle = document.getElementById('nav-toggle');
+    const nav = document.querySelector('.nav');
+    const navToggle = document.getElementById('nav-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const animateElements = document.querySelectorAll('[data-animate]');
 
-    if (!nav) return;
-
-    // Scroll — glassmorphism nav on scroll
-    let ticking = false;
+    // Smooth Scroll Navigation Effect
     window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                nav.classList.toggle('scrolled', window.scrollY > 50);
-                ticking = false;
-            });
-            ticking = true;
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
         }
-    }, { passive: true });
+    });
 
-    // Mobile toggle
-    if (toggle && mobileMenu) {
-        const closeMobile = () => {
-            toggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        };
+    // Intersection Observer for Reveal Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-        const openMobile = () => {
-            toggle.classList.add('active');
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        };
-
-        toggle.addEventListener('click', () => {
-            mobileMenu.classList.contains('active') ? closeMobile() : openMobile();
-        });
-
-        // Close on link click
-        mobileMenu.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
-            link.addEventListener('click', closeMobile);
-        });
-
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                closeMobile();
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                revealObserver.unobserve(entry.target);
             }
+        });
+    }, observerOptions);
+
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        revealObserver.observe(el);
+    });
+
+    // Mobile Menu Toggle
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
     }
-}
 
-/* ==========================================================================
-   Scroll Animations (Intersection Observer)
-   ========================================================================== */
-
-function initScrollAnimations() {
-    const elements = document.querySelectorAll('[data-animate]');
-    if (!elements.length) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
+    // Close mobile menu on link click
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
     });
 
-    elements.forEach(el => observer.observe(el));
-}
+    // Escape key to close menu
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            navToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
 
-/* ==========================================================================
-   Accordion (Leistungsphasen / FAQ)
-   ========================================================================== */
-
-function initAccordion() {
-    const phaseItems = document.querySelectorAll('.phase-item');
-    if (!phaseItems.length) return;
-
-    phaseItems.forEach(item => {
+    // Accordion Logic (if any)
+    const accordionItems = document.querySelectorAll('.phase-item');
+    accordionItems.forEach(item => {
         const header = item.querySelector('.phase-header');
-        if (!header) return;
-
         header.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-
-            // Close all
-            phaseItems.forEach(i => i.classList.remove('active'));
-
-            // Toggle current
-            if (!isActive) {
-                item.classList.add('active');
-            }
+            accordionItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
         });
     });
-}
-
-/* ==========================================================================
-   Smooth Scroll
-   ========================================================================== */
-
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-            const href = anchor.getAttribute('href');
-            if (href === '#') return;
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-}
+});
