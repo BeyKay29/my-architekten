@@ -25,7 +25,10 @@
                 <a href="nutzungsaenderung.html" class="nav-link">Umnutzung</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </div>
-            <a href="kontakt.html" class="nav-cta">Anfragen</a>
+            <a href="kontakt.html" class="nav-cta">Projekt anfragen</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -42,7 +45,7 @@
         <div class="container">
             <div class="philosophy-grid">
                 <div class="philosophy-image" data-animate>
-                    <img src="images/mustafa-yilmaz.jpg" alt="Mustafa Yilmaz">
+                    <img src="images/mustafa-yilmaz.jpg" alt="Mustafa Yilmaz - Inhaber myArchitekten">
                 </div>
                 <div class="philosophy-content" data-animate>
                     <span class="section-tag">Inhaber</span>
@@ -63,31 +66,104 @@
             <div class="section-header centered" data-animate style="text-align: center; margin-bottom: 64px;">
                 <span class="section-tag">Netzwerk</span>
                 <h2 class="section-title">Synergie durch Expertise.</h2>
+                <p class="philosophy-text" style="max-width: 600px; margin: 24px auto; font-size: 16px;">Unser
+                    eingespieltes Netzwerk aus Spezialisten garantiert Ihnen Sicherheit in allen Projektphasen — von der
+                    Finanzierung bis zur notariellen Abwicklung.</p>
             </div>
-            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="stat-item" data-animate>
-                    <span class="stat-label">Statik & Brandschutz</span>
-                    <p class="philosophy-text" style="font-size: 14px; margin-top: 12px;">Enge Kooperation mit
-                        spezialisierten Ingenieurbüros für Sicherheit und Stabilität.</p>
+
+            <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <!-- Partner 1 -->
+                <div class="service-card" data-animate
+                    style="padding: 40px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <span class="section-tag no-line"
+                            style="font-size: 11px; color: var(--c-accent);">Sachverständiger</span>
+                        <h3 class="service-card-title">Ralf Wefers</h3>
+                        <p class="service-card-text" style="font-size: 14px; min-height: 80px;">Zertifizierter Experte
+                            für Immobilienbewertung und Bauschäden. Unverzichtbar für präzise Gutachten und fundierte
+                            Ankaufsberatung.</p>
+                    </div>
+                    <a href="https://www.immobiliensachverstaendige-in-nrw.de/alle-standorte/dortmund-sued"
+                        target="_blank" rel="noopener noreferrer" class="link-arrow"
+                        style="margin-top: 24px; font-size: 13px; color: var(--c-text);">
+                        Expertise ansehen <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
-                <div class="stat-item" data-animate>
-                    <span class="stat-label">Notariat & Recht</span>
-                    <p class="philosophy-text" style="font-size: 14px; margin-top: 12px;">Erfahrene Partner für
-                        Abgeschlossenheitsbescheinigungen und Grundbuchthemen.</p>
+
+                <!-- Partner 2 -->
+                <div class="service-card" data-animate
+                    style="padding: 40px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <span class="section-tag no-line" style="font-size: 11px; color: var(--c-accent);">Recht &
+                            Notariat</span>
+                        <h3 class="service-card-title">Tobias Teepe</h3>
+                        <p class="service-card-text" style="font-size: 14px; min-height: 80px;">Rechtsanwalt und Notar.
+                            Unser Partner für die rechtssichere Abwicklung von Abgeschlossenheitsbescheinigungen und
+                            Grundbucheinträgen.</p>
+                    </div>
+                    <a href="https://lohkamp-teepe.de/" target="_blank" rel="noopener noreferrer" class="link-arrow"
+                        style="margin-top: 24px; font-size: 13px; color: var(--c-text);">
+                        Kanzlei besuchen <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
-                <div class="stat-item" data-animate>
-                    <span class="stat-label">Bauherrenberatung</span>
-                    <p class="philosophy-text" style="font-size: 14px; margin-top: 12px;">Persönliche Begleitung von der
-                        ersten Idee bis zum fertigen Objekt.</p>
+
+                <!-- Partner 3 -->
+                <div class="service-card" data-animate
+                    style="padding: 40px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <span class="section-tag no-line"
+                            style="font-size: 11px; color: var(--c-accent);">Baufinanzierung</span>
+                        <h3 class="service-card-title">Dirk Meister</h3>
+                        <p class="service-card-text" style="font-size: 14px; min-height: 80px;">Spezialist für komplexe
+                            Baufinanzierungen. Er schafft das finanzielle Fundament für Ihre architektonischen Visionen.
+                        </p>
+                    </div>
+                    <a href="https://www.baugeld-spezialisten.de/berater/dirk-meister/" target="_blank"
+                        rel="noopener noreferrer" class="link-arrow"
+                        style="margin-top: 24px; font-size: 13px; color: var(--c-text);">
+                        Konditionen prüfen <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
+            </div>
+
+            <div class="stat-item" data-animate
+                style="margin-top: 64px; text-align: center; border: 1px dashed var(--c-line); padding: 32px; border-radius: 20px;">
+                <span class="stat-label" style="font-size: 12px;">Ergänzende Expertise</span>
+                <p class="philosophy-text" style="font-size: 15px; margin-top: 12px;">Zusätzlich kooperieren wir eng mit
+                    spezialisierten Fachplanern für <strong>Statik, Brandschutz</strong> sowie <strong>Wärme- und
+                        Schallschutz</strong>.</p>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom">
-                &copy; 2025 myArchitekten. High Distinction.
+            <div class="footer-grid">
+                <div class="footer-brand"><img src="images/logo.png" alt="Logo">
+                    <p class="footer-description">Architektur mit Anspruch.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Studio</h4><a href="index.html" class="footer-link">Start</a><a
+                        href="ueber-uns.html" class="footer-link">Über uns</a>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Region</h4><a href="nutzungsaenderung-dortmund.html"
+                        class="footer-link">Dortmund</a><a href="nutzungsaenderung-bochum.html"
+                        class="footer-link">Bochum</a>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Legal</h4><a href="impressum.html" class="footer-link">Impressum</a><a
+                        href="datenschutz.html" class="footer-link">Datenschutz</a>
+                </div>
             </div>
         </div>
     </footer>

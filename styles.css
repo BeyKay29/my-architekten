@@ -250,6 +250,31 @@ ul {
     background-color: #fff;
 }
 
+/* Link Arrow - Apple Style */
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--c-accent);
+    text-decoration: none;
+    transition: var(--t-suave);
+    cursor: pointer;
+}
+
+.link-arrow svg {
+    transition: transform var(--t-suave);
+}
+
+.link-arrow:hover {
+    color: #fff;
+}
+
+.link-arrow:hover svg {
+    transform: translateX(4px);
+}
+
 .btn-secondary {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--c-text);
@@ -337,9 +362,13 @@ ul {
 }
 
 .service-card:hover {
-    transform: scale(1.02);
-    border-color: rgba(var(--c-accent-rgb), 0.5);
-    background: #1a1a1c;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.service-card:hover::before {
+    opacity: 1;
 }
 
 .service-card:hover::after {
